@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+}
+
+.list {
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.548);
+  margin: 12% 35% 12% 35%;
+}
+
+.List-items {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+}
+
+.clearall {
+  width: 100%;
+  border: none;
+  padding: 13px;
+}
+
+.inputTask {
+  padding: 10px;
+}
+
+.output-container {
+  padding: 20px;
+}
+
+.inputTask button {
+  border: none;
+  float: right;
+}
+
+button i {
+  font-size: 30px;
+}
+
+h3 {
+  padding: 15px;
+}
+
+.fas {
+  float: right;
+  align-self: center;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.753);
+}
+
+ul {
+  padding: 0%;
+  margin: 0%;
+}
+
+input {
+  border: none;
+}
+
+.description {
+  width: 90%;
+}
