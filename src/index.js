@@ -34,7 +34,7 @@ function displayTask() {
         }' data-index='${element.index}' class='description ${element.completed ? 'completed' : ''
         }'>
       <i class='fas fa-ellipsis-v move-element' data-id='${element.index
-      }'></i>
+        }'></i>
       </li>
       <hr>
       `;
