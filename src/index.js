@@ -1,11 +1,11 @@
 import './style.css';
-import updateStatus from './check'
+import updateStatus from './check.js';
 
 const container = document.getElementById('output-container');
-let content = JSON.parse(localStorage.getItem('taskContent')) || [{
+const content = JSON.parse(localStorage.getItem('taskContent')) || [{
   index: 0,
   completed: true,
-  description: 'wash the dishes'
+  description: 'wash the dishes',
 },
 {
   index: 1,
@@ -48,7 +48,7 @@ function displayTask() {
 
 window.addEventListener('DOMContentLoaded', () => {
   if (!localStorage.getItem('taskContent')) {
-    localStorage.setItem('taskContent', JSON.stringify(content))
+    localStorage.setItem('taskContent', JSON.stringify(content));
   }
 });
 displayTask();
