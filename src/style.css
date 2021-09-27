@@ -9,13 +9,13 @@
 }
 
 .list {
-box-shadow: 0 0 22px rgba(0, 0, 0, 0.548);
-  margin: 12%  35% 12% 35% ;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.548);
+  margin: 12% 35% 12% 35%;
   /* text-align: center; */
 }
 
 .List-items {
- width: 100%;
+  width: 100%;
   padding: 5px;
   margin: 5px;
 }
