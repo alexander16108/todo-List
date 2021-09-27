@@ -27,7 +27,7 @@ const content = [
 function displayTask() {
   if (content !== []) {
     content.forEach((element) => {
-     const structure = ` <li class='List-items' id='${element.index}'>
+      const structure = ` <li class='List-items' id='${element.index}'>
                    <input type='checkbox' class='box' data-id='${element.index
         }'  ${element.completed ? 'checked' : ''}>
                    <input type='text' value='${element.description}' data-index='${element.index
@@ -37,7 +37,7 @@ function displayTask() {
                    </li>
                    <hr>
                    `
-                   container.innerHTML += structure;
+      container.innerHTML += structure;
     });
   }
 }
