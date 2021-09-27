@@ -38,6 +38,5 @@ function displayTask() {
     });
   }
 }
-console.log(container);
 
 displayTask();
