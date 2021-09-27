@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 import './style.css';
-import dragDrop from './dragdrop';
-import statusUpdate from './server';
+import dragDrop from './dragdrop.js';
+import statusUpdate from './server.js';
 
 class Task {
   constructor() {
