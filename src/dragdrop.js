@@ -1,7 +1,7 @@
 let target;
 
 function routing(source, target) {
-  const savedTasks = JSON.parse(localStorage.getItem("savedTasks"));
+  const savedTasks = JSON.parse(localStorage.getItem('savedTasks'));
   if (savedTasks.length < 2) return;
 
   const sourceA = savedTasks[source];
@@ -18,22 +18,22 @@ function routing(source, target) {
 
   savedTasks[source] = savedTasks[targetPointer];
   savedTasks[targetPointer] = sourceA;
-  localStorage.setItem("savedTasks", JSON.stringify(savedTasks));
+  localStorage.setItem('savedTasks', JSON.stringify(savedTasks));
 }
 
 export default function dragDrop(event, index) {
   const Event = event.type;
   const source = index;
   switch (Event) {
-    case "dragstart":
-      event.target.classList.add("active-content");
+    case 'dragstart':
+      event.target.classList.add('active-content');
       break;
-    case "dragend":
-      event.target.classList.remove("active-content");
+    case 'dragend':
+      event.target.classList.remove('active-content');
       routing(source, target);
       break;
-    case "dragover":
-      if (event.target.className === "List-items") {
+    case 'dragover':
+      if (event.target.className === 'List-items') {
         target = event.target.children[2].innerHTML;
       }
       break;

@@ -1,4 +1,3 @@
-
 function statusUpdate(e, i) {
   const savedTasks = JSON.parse(localStorage.getItem('savedTasks'));
   savedTasks[i].completed = !savedTasks[i].completed;
