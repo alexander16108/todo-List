@@ -16,7 +16,7 @@ After cloning it you can see the project opening the index.html file with your f
 
 ### Live Version Link
 
- [Live Version]( https://alexander16108.github.io/todo-List/)
+ [Live Version]( https://alexander16108.github.io/todo-List/dist/)
 
 
 ### Build With
