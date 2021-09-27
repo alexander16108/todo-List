@@ -30,6 +30,10 @@ box-shadow: 0 0 22px rgba(0, 0, 0, 0.548);
   padding: 10px;
 }
 
+.output-container {
+  padding: 20px;
+}
+
 .inputTask button {
   border: none;
   float: right;
@@ -39,7 +43,7 @@ button i {
   font-size: 30px;
 }
 
-p {
+h3 {
   padding: 15px;
 }
 
