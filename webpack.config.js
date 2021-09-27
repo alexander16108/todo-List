@@ -7,6 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
    output: {
      filename: 'main.js',
      path: path.resolve(__dirname, 'dist'),
+     clean: true,
    },
    devtool: 'inline-source-map',
    devServer: {
@@ -14,7 +15,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
   },
    plugins: [
     new HtmlWebpackPlugin({
-      title: 'TODO-LIST',
       template: './src/index.html'
     }),
   ],
