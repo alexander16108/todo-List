@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <title>TODOLIST</title>
+  <title>todoList</title>
 </head>
-
 <body>
   <main>
     <header>
+
     </header>
-    <section class="list">
-      <div class="input-container">
-        <h3>Today's todoList <i class="fas fa-sync"></i></h3>
+    <section class="inputText">
+      <div class="inputContainer">
+        <p>Today's todoList <i class="fas fa-sync"></i></p>
         <hr>
         <div class="inputTask">
-          <input type="text" placeholder="Add your Task here....">
-          <button type="submit"><i class="fas fa-plus-circle"></i></button>
+          <input type="text" name="text" id="task" placeholder="Add Task...">
+          <button type="submit" class="addBtn"><i class="fas fa-plus-circle"></i></button>
         </div>
       </div>
-      <hr>
+      <p class="error"></p>
+      
       <div class="task">
         <ul class="output-container" id="output-container"></ul>
         <button type="submit" class="clearall" id="clear-all">Clear All Completely</button>
@@ -31,5 +31,4 @@
     </section>
   </main>
 </body>
-
 </html>
