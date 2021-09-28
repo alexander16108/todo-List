@@ -85,7 +85,7 @@ npm run start
 
 ## Screenshot of the page
 
-<!-- ![image](https://user-images.githubusercontent.com/60612329/134370021-45118641-d933-4dc1-90ff-630bc9b59540.png) -->
+![image](https://user-images.githubusercontent.com/60612329/134370021-45118641-d933-4dc1-90ff-630bc9b59540.png)
 
 
 ### Live Version Link
