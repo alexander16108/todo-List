@@ -25,6 +25,7 @@
 .input {
   text-align: left;
   padding: 10px;
+  outline: none;
 }
 
 .input-text {

@@ -35,7 +35,7 @@ Things done so far:
 
 ## Built With
 
-- Major languages: HTML, SCSS, JS
+- Major languages: HTML, CSS, JS
 - Technologies used: Lighthouse, Webhint, Stylelint, ESLint, Webpack
 
 
