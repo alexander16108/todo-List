@@ -4,8 +4,7 @@
  > "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!
 
 
-## Getting Started
-Things done so far:
+## Things done so far:
 
 ### 1. Create list structure
 
@@ -50,7 +49,7 @@ To get a local copy up and running, follow the steps below in your terminal.
 
 ### Setup
 
-Clone the project:
+Clone the project on CMD:
 
 ```
 git clone https://github.com/alexander16108/todo-List.git
@@ -72,14 +71,14 @@ The assets are in the `src` directory.
 
 The output is in the `dist` directory.
 
-### Run tests
+<!-- ### Run tests
 
 To run the entire test suite:
 
 ```
 npm test
 ```
-
+ -->
 ### Deployment
 
 To build the website:
