@@ -71,6 +71,11 @@ import statusUpdate from './server.js';
       checkboxes.type = 'checkbox';
       checkboxes.className = 'box';
       checkboxes.checked = task.completed;
+      if (task.completed === true) {
+        checkboxes.checked = p.classList.add('completed');
+      }else {
+        checkboxes.checked = p.classList.remove('completed');
+      }
       checkboxes.addEventListener('change', (e) => {
         statusUpdate(e, i);
         displayAllTask();
@@ -85,12 +90,7 @@ import statusUpdate from './server.js';
       });
       button.addEventListener('click', (e) => {
         button.classList.add('fa-trash-alt', 'trash');
-        checkboxes.checked = p.classList.add('completed');
-        document
-          .querySelector('.fa-trash-alt')
-          .addEventListener('click', (e) => {
-            deleteTask(e, i);
-          });
+        document.querySelector('.fa-trash-alt').addEventListener('click', (e) => {deleteTask(e, i)})
         editTask(e, i);
       });
 
