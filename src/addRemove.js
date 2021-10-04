@@ -61,11 +61,11 @@ import statusUpdate from './server.js';
 
     savedTasks.forEach((task, i) => {
       const li = document.createElement('li');
-      li.className = 'List-items';
+      li.classList.add('List-items', 'flex-btw');
       li.draggable = 'false';
 
       const p = document.createElement('p');
-      p.className = 'description';
+      p.classList.add( 'description', 'bd-ol');
 
       const checkboxes = document.createElement('input');
       checkboxes.type = 'checkbox';
@@ -84,12 +84,12 @@ import statusUpdate from './server.js';
       const index = document.createElement('span');
       index.className = 'index';
       const button = document.createElement('i');
-      button.classList.add('fas', 'fa-ellipsis-v', 'move-item');
+      button.classList.add('fas', 'fa-ellipsis-v', 'move-item', 'flex-md', 'bd-ol');
       p.addEventListener('keydown', (e) => {
         editTask(e, i);
       });
       button.addEventListener('click', (e) => {
-        button.classList.add('fa-trash-alt', 'trash');
+        button.classList.add('fa-trash-alt', 'trash', 'flex-md', 'bd-ol');
         document.querySelector('.fa-trash-alt').addEventListener('click', (e) => {deleteTask(e, i)})
         editTask(e, i);
       });
