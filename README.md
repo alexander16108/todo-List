@@ -101,7 +101,7 @@ npm run start
 
 ### Live Version Link
 
- [Live Version](https://alexander16108.github.io/todo-List/dist)
+ [Live Version](https://alex-todolist.netlify.app/)
 
 
 ### Contributors
