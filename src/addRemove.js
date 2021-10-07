@@ -104,7 +104,6 @@ import statusUpdate from './server.js';
     });
   }
 
-
 export default function addTasks(v) {
   addTask({
     description: v,
