@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 
- import localStorageMock from '../_mocks_/localStorage.js';
-import statusUpdate from '../_mocks_/status.js';
+ import localStorageMock from '../_mock_/localStorage.js';
+import statusUpdate from '../_mock_/status.js';
 
  const savedTasks = [
    {
