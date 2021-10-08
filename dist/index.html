@@ -14,17 +14,17 @@
 <script defer src="main.js"></script></head>
 
 <body>
-  <section class="to-do-list body">
+  <section class="to-do-list body flex-md">
     <div class="list-header">
       <h1>Today's To Do List</h1>
     </div>
 
-    <form class="form add-task">
-      <input type="text" placeholder="Add to your List..." required class="input-text" id="add-task">
-      <i class="fas fa-level-down-alt add-list-btn" id="add-list-btn"></i>
+    <form class="form add-task flex-btw">
+      <input type="text" placeholder="Add to your List..." required class="input-text bd-ol" id="add-task">
+      <i class="fas fa-level-down-alt add-list-btn flex-md" id="add-list-btn"></i>
     </form>
     <ul class="task-list" id="task-list"></ul>
-    <button type="submit" class="clearAll" id="clearAll">Clear All Complete</button>
+    <button type="submit" class="clearAll bd-ol" id="clearAll">Clear All Complete</button>
   </section>
 </body>
 
