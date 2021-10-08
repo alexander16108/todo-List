@@ -162,3 +162,19 @@ describe('remove method', () => {
   });
 });
 
+describe('local storage management', () => {
+  const localStorage = new LocalStorage();
+  const arr = [{
+    description: 'local storage test',
+    completed: false,
+    index: 1,
+  }];
+  localStorage.setDataLocalStorage(arr);
+  test('it stores items', () => {
+    expect(localStorage.getDataLocalStorage()).toEqual([{
+      description: 'local storage test',
+      completed: false,
+      index: 1,
+    }]);
+  });
+});
