@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
-import localStorageMock from '../__mock__/localStorage';
+import localStorageMock from '../__mock__/localStorage.js';
 
-import deleteItems from '../__mock__/remove';
+import deleteItems from '../__mock__/remove.js';
 
 const savedTasks = [
   {

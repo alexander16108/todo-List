@@ -1,4 +1,6 @@
-import localStorageMock from './localStorage';
+/* eslint-disable no-plusplus */
+/* eslint-disable no-return-assign */
+import localStorageMock from './localStorage.js';
 
 const updateList = () => {
   let newIndex = 1;
