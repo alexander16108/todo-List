@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-describe('test add elements', () => {
+describe('test add, remove and edit elements', () => {
   document.body.innerHTML = '<div>'
   + '<input type="text" name="task" id="task"'
   + 'class="input-task element-border" placeholder="Add to your list..." value="add testing">'
@@ -12,7 +12,7 @@ describe('test add elements', () => {
 
   const ul = document.querySelector('.task-list');
   let size = 0;
-  let savedTasks = [];
+  const savedTasks = [];
 
   const displayAllTask = () => {
     ul.innerHTML = '';
@@ -21,7 +21,7 @@ describe('test add elements', () => {
       li.classList.add('List-items', 'flex-btw');
 
       const p = document.createElement('p');
-      p.classList.add( 'description', 'bd-ol');
+      p.classList.add('description', 'bd-ol');
 
       const checkboxes = document.createElement('input');
       checkboxes.type = 'checkbox';
@@ -29,7 +29,7 @@ describe('test add elements', () => {
       checkboxes.checked = task.completed;
       if (task.completed === true) {
         checkboxes.checked = p.classList.add('completed');
-      }else {
+      } else {
         checkboxes.checked = p.classList.remove('completed');
       }
       const index = document.createElement('span');
@@ -44,15 +44,16 @@ describe('test add elements', () => {
       li.appendChild(button);
       ul.appendChild(li);
     });
-  }
+  };
 
   const addIndex = () => {
     if (savedTasks.length < 1) {
       return size;
     }
     return savedTasks[savedTasks.length - 1].index + 1;
-  }
+  };
 
+  // eslint-disable-next-line no-unused-vars
   const addTask = (book) => {
     addTask({
       description: book,
@@ -61,9 +62,17 @@ describe('test add elements', () => {
     });
     savedTasks.push(book);
     size += 1;
-  }
+  };
+
+  const deleteTask = (e, i) => {
+    savedTasks.splice(i, 1);
+    displayAllTask();
+  };
 
   test('it adds the task to the list in the dom', () => {
     expect(addIndex().length !== 0).toBeTruthy();
+  });
+  test('it removes the task from the list in the dom', () => {
+    expect(deleteTask().length !== 0).toBeNull();
   });
 });
