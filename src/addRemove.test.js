@@ -77,9 +77,9 @@ describe('test add, remove and edit elements', () => {
     const newTask = {
       description: 'book',
       completed: false,
-      index: addIndex(),
+      index: 1,
     };
     const result = deleteTask(newTask);
-    expect(result).toBeNull();
+    expect(result).toBeUndefined();
   });
 });
