@@ -1,11 +1,11 @@
-import localStorageMock from "./localStorage";
+import localStorageMock from './localStorage';
 
 const savedTasks = [];
 let size = 0;
 
 const Index = () => {
   if (savedTasks.length < 1) {
-    return size+1;
+    return size + 1;
   }
   return savedTasks[savedTasks.length - 1].index + 1;
 };
@@ -21,7 +21,7 @@ const add = (savedTasks) => {
   savedTasks.push(addTask);
   localStorageMock.setItem('savedTasks', savedTasks);
   size += 1;
-  return savedTasks
+  return savedTasks;
 };
 
 module.exports = add;
