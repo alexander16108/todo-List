@@ -1,4 +1,4 @@
-import localStorageMock from './localStorage';
+import localStorageMock from './localStorage.js';
 
 const savedTasks = [];
 let size = 0;
