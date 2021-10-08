@@ -1,6 +1,6 @@
-import localStorageMock from './localStorage.js'
+import localStorageMock from './localStorage.js';
 
-const savedTasks = []
+const savedTasks = [];
 
 const editTask = (e, i) => {
   if (e.key === 'Enter') {
