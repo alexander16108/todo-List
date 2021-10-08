@@ -5,6 +5,6 @@ const statusUpdate = (e, i, savedTasks) => {
   e.checked = savedTasks[i].completed;
   localStorageMock.setItem('savedTasks', savedTasks);
   return savedTasks;
-}
+};
 
 module.exports = statusUpdate;
