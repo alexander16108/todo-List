@@ -53,7 +53,6 @@ describe('test add elements', () => {
     return savedTasks[savedTasks.length - 1].index + 1;
   }
 
-  // Act
   const addTask = (book) => {
     addTask({
       description: book,
@@ -61,11 +60,8 @@ describe('test add elements', () => {
       index: addIndex(),
     });
     savedTasks.push(book);
-    // localStorage.setItem('savedTasks', JSON.stringify(savedTasks));
     size += 1;
   }
-
-  // Assert
 
   test('it adds the task to the list in the dom', () => {
     expect(addIndex().length !== 0).toBeTruthy();
