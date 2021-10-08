@@ -61,7 +61,7 @@ describe('test add elements', () => {
       index: addIndex(),
     });
     savedTasks.push(book);
-    localStorage.setItem('savedTasks', JSON.stringify(savedTasks));
+    // localStorage.setItem('savedTasks', JSON.stringify(savedTasks));
     size += 1;
   }
 
@@ -71,4 +71,3 @@ describe('test add elements', () => {
     expect(addIndex().length !== 0).toBeTruthy();
   });
 });
-
