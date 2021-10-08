@@ -20,6 +20,11 @@ import statusUpdate from './server.js';
   }
 
   const addTask = (book) => {
+    addTask({
+      description: book,
+      completed: false,
+      index: addIndex(),
+    });
     savedTasks.push(book);
     localStorage.setItem('savedTasks', JSON.stringify(savedTasks));
     size += 1;
@@ -105,11 +110,7 @@ import statusUpdate from './server.js';
   }
 
 export default function addTasks(v) {
-  addTask({
-    description: v,
-    completed: false,
-    index: addIndex(),
-  });
+
   displayAllTask();
 }
 
