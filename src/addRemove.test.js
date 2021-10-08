@@ -74,11 +74,7 @@ describe('test add, remove and edit elements', () => {
     expect(addIndex().length !== 0).toBeTruthy();
   });
   test('it removes the task from the list in the dom', () => {
-    const newTask = {
-      description: 'book',
-      completed: false,
-      index: 1,
-    };
+    const newTask = { index: 1 };
 
     savedTasks.push((newTask.index));
     const lengthArray = savedTasks.length;
