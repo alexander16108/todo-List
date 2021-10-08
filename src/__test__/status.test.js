@@ -9,7 +9,7 @@ import statusUpdate from '../_mocks_/status.js';
    {
       description: 'make noodles',
       completed: false,
-      index: 2,
+      index: 1,
    },
  ];
 
