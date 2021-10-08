@@ -53,7 +53,7 @@ const editTask = (e, i) => {
 // to Delete task from the list and
 // updating the local storage at the same time
 
-const deleteTask = (e, i) => {
+const deleteTask = (i) => {
   savedTasks.splice(i, 1);
   localStorage.setItem('savedTasks', JSON.stringify(savedTasks));
   displayAllTask();

@@ -65,7 +65,7 @@ describe('test add, remove and edit elements', () => {
     size += 1;
   };
 
-  const deleteTask = (e, i) => {
+  const deleteTask = (i) => {
     savedTasks.splice(i, 1);
     displayAllTask();
   };
@@ -79,7 +79,14 @@ describe('test add, remove and edit elements', () => {
       completed: false,
       index: 1,
     };
-    const result = deleteTask(newTask);
-    expect(result).toBeUndefined();
+
+    console.log(savedTasks);
+    const lengthArray = savedTasks.length;
+    savedTasks.push((newTask.index));
+    console.log(savedTasks);
+    deleteTask(newTask);
+    console.log(savedTasks);
+
+    expect(savedTasks.length !== (lengthArray - 1)).toBeTruthy();
   });
 });
