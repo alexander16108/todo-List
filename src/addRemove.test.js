@@ -80,13 +80,10 @@ describe('test add, remove and edit elements', () => {
       index: 1,
     };
 
-    console.log(savedTasks);
-    const lengthArray = savedTasks.length;
     savedTasks.push((newTask.index));
-    console.log(savedTasks);
+    const lengthArray = savedTasks.length;
     deleteTask(newTask);
-    console.log(savedTasks);
 
-    expect(savedTasks.length !== (lengthArray - 1)).toBeTruthy();
+    expect(savedTasks.length === (lengthArray - 1)).toBeTruthy();
   });
 });
