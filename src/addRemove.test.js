@@ -16,6 +16,7 @@ describe('test add, remove and edit elements', () => {
 
   const displayAllTask = () => {
     ul.innerHTML = '';
+    // eslint-disable-next-line no-unused-vars
     savedTasks.forEach((task, i) => {
       const li = document.createElement('li');
       li.classList.add('List-items', 'flex-btw');

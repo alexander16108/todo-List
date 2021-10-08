@@ -1,4 +1,4 @@
-import newTask from './addRemove';
+import newTask from './addRemove.js';
 
 document.getElementById('add-task').addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
