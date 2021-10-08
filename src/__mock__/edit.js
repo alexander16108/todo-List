@@ -1,14 +1,9 @@
 import localStorageMock from './localStorage.js';
 
-const savedTasks = [];
-
-const editTask = (e, i) => {
-  if (e.key === 'Enter') {
-    savedTasks[i].description = e.target.innerHTML;
+const editTask = (e, i, savedTasks) => {
+    savedTasks[i].description = e.innerHTML;
     localStorageMock.setItem('savedTasks', savedTasks);
-    e.preventDefault();
-  }
-  e.target.parentNode.children[1].contentEditable = true;
+  // e.parentNode.children[1].contentEditable = true;
 };
 
 module.exports = editTask;
