@@ -15,7 +15,7 @@ describe('test add, remove and edit elements', () => {
   const savedTasks = [];
 
   const displayAllTask = () => {
-    ul.innerHTML = '';
+    // ul.innerHTML = '';
     // eslint-disable-next-line no-unused-vars
     savedTasks.forEach((task, i) => {
       const li = document.createElement('li');
@@ -74,6 +74,12 @@ describe('test add, remove and edit elements', () => {
     expect(addIndex().length !== 0).toBeTruthy();
   });
   test('it removes the task from the list in the dom', () => {
-    expect(deleteTask().length !== 0).toBeNull();
+    const newTask = {
+      description: 'book',
+      completed: false,
+      index: addIndex(),
+    };
+    const result = deleteTask(newTask);
+    expect(result).toBeNull();
   });
 });
