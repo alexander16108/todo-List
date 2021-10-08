@@ -30,6 +30,4 @@
   test('Local storage should not change', () => {
     expect(localStorageMock.getItem('savedTasks')[1].description).toBe('going to bed');
   });
-
-https://docs.google.com/document/d/1NEHEfz3uJX5nh-G9CASOpXeNpYsgDu6pIZj7U1DmhmM/edit?usp=sharing
  });
