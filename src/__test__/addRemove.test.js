@@ -93,3 +93,72 @@ describe('test add elements', () => {
   });
 });
 
+describe('remove method', () => {
+  // Arrange
+  document.body.innerHTML = '<ul class="tasks-list">'
+  + '<li data-id = "1"><input type="checkbox" checked><p>test 1</p></li>'
+  + '<li data-id = "2"><input type="checkbox"><p>test 1</p></li>'
+  + '<li data-id = "3"><input type="checkbox" checked><p>test 3</p></li>'
+  + '</ul>';
+
+  const tasksList = document.querySelector('.tasks-list');
+
+  let toDoList = [
+    {
+      description: 'test 1',
+      completed: false,
+      index: 1,
+    },
+    {
+      description: 'test 2',
+      completed: false,
+      index: 2,
+    },
+    {
+      description: 'test 3',
+      completed: false,
+      index: 3,
+    },
+  ];
+
+  const localStorage = new LocalStorage();
+  localStorage.setDataLocalStorage(toDoList);
+
+  const updateArray = () => {
+    const items = [...tasksList.children];
+
+    toDoList = [];
+
+    items.forEach((item, index) => {
+      const newTask = {
+        description: item.lastChild.textContent,
+        completed: item.firstChild.checked,
+        index: index + 1,
+      };
+      toDoList.push(newTask);
+    });
+    localStorage.setDataLocalStorage(toDoList);
+  };
+
+  const taskElem = document.querySelector('li[data-id="3"]');
+
+  // Act
+  const removeElement = (element) => {
+    if (element) {
+      tasksList.removeChild(element);
+      updateArray();
+      return toDoList;
+    }
+    return false;
+  };
+
+  // Assert
+  test('remove an element from the array', () => {
+    expect(removeElement(taskElem)).toHaveLength(2);
+  });
+
+  test('remove element from the list', () => {
+    expect([...tasksList.children].length).toBe(2);
+  });
+});
+
